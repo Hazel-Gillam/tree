@@ -2,11 +2,13 @@ public class Tree {
     private int value;
     private Tree left;
     private Tree right;
+    private Tree parent;
 
     public Tree(int value) {
         this.value = value;
         this.left = null;
         this.right = null;
+        this.parent = null;
     }
 
     public void setLeft(Tree left) {
@@ -27,5 +29,13 @@ public class Tree {
        
     public int getValue() {
         return this.value;
+    }
+
+    public void setParent(Tree parent) {
+        this.parent = parent;
+    }
+        
+    public Tree getParent() {
+        return this.parent;
     }
 }
